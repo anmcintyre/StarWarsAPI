@@ -1,0 +1,125 @@
+@font-face{
+	font-family: 'starwars';
+	src: url('star-wars-font/DISTGRG_.ttf') format('truetype');
+	font-weight: bold;
+}
+body{
+	background-color: #0D0D0D;
+	font-family: 'Roboto', sans-serif;
+}
+h1{
+	font-family: starwars;
+	font-weight: bold;
+	text-align: center;
+	color: #FFD900;
+	font-size: 3em;
+}
+h3{
+	font-family: starwars;
+	color: #FFD900;
+	text-align: center;
+	letter-spacing: 3px;
+}
+h3 a{
+	color: #5B6ED9;
+}
+.menu{
+	margin: 0;
+	text-align:  center;
+	font-size: 1.5em;
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;	
+}
+
+.menu li{
+	display: inline-block;
+	list-style: none;
+	padding:  10px 0px 5px;;
+	font-family: 'starwars';
+	width: 7em;
+	color: #FFD900;
+	cursor: pointer;
+}
+
+.active{
+	color: #E8D995;
+}
+.container{
+	background-color: #000000;
+	float: left;
+	padding-bottom: 20px;
+	margin-left:5em;
+	margin-right: 5em;
+	border-radius: 15px;
+}
+#count{
+	color: #E8D995;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#buttons{
+	text-align: center;
+	margin: 10px 5px;
+}
+button{
+	width: 8em;
+}
+
+.template{
+	display: none;
+}
+
+.data, .count{
+	margin-top: 20px;
+}
+
+h2{
+	color: #E8D995;
+}
+
+dt{
+	color: #A68160;
+}
+
+dd{
+	color: #F2E6C2;
+}
+.person, .film, .planet, .species, .starship, .vehicle{
+	float: left;
+	margin-right: 1em;
+	margin-left: 1em;
+	margin-top: 1em;
+	padding: 10px 15px;
+	background-color: #161926;
+	border: 1px solid #1B2741;
+	border-radius: 15px;
+}
+
+.film{
+	width: 20em;
+	height: 15em;
+}
+
+.person{
+	width: 15em;
+	height: 15em;
+}
+
+.planet{
+	width: 15em;
+	height: 25em;
+}
+.species{
+	width: 15em;
+}
+.starship{
+	width: 15em;
+	height: 27em;
+}
+
+.vehicle{
+	width: 15em;
+	height: 28em;
+}
+

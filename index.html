@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Star Wars</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/app.js"></script>	
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<h1>Star Wars</h1>
+	<h3>API provided by <a href="http://swapi.co/">SWAPI</a></h3>
+	<ul class="menu">
+		<li><a id="films">Films</a></li>
+		<li><a id="people">People</a></li>
+		<li><a id="planets">Planets</a></li>
+		<li><a id="species">Species</a></li>
+		<li><a id="starships">Starships</a></li>
+		<li><a id="vehicles">Vehicles</a></li>
+	</ul>
+	<div class="container">
+		<div id="count"></div>
+		<div id="buttons"></div>
+		<div id="data"></div>
+
+		<div class="template film">
+			<span>
+			<h2 class="title"></h2>
+			<dl>
+				<dt>Episode ID</dt><dd class="epID"></dd>
+				<dt>Director </dt><dd class="director"></dd>
+				<dt>Producer</dt><dd class="producer"></dd>
+				<dt>Release Date</dt><dd class="date"></dd>
+			</dl>
+			</span>
+			<span class="opening"></span>
+		</div>
+
+		<div class="template person">
+			<h2 class="name"></h2>
+			<dl>
+				<dt>Height</dt><dd class="height"></dd>
+				<dt>Hair Color </dt><dd class="hair"></dd>
+				<dt>Skin Color</dt><dd class="skin"></dd>
+				<dt>Eye Color</dt><dd class="eye"></dd>
+			</dl>
+		</div>
+
+		<div class="template planet">
+			<h2 class="name"></h2>
+			<dl>
+				<dt>Diameter</dt><dd class="diameter"></dd>
+				<dt>Hours in a day</dt><dd class="rotation_period"></dd>
+				<dt>Days in a year</dt><dd class="orbital_period"></dd>
+				<dt>Gravity</dt><dd class="gravity"></dd>
+				<dt>Population</dt><dd class="population"></dd>
+				<dt>Climate</dt><dd class="climate"></dd>
+				<dt>Terrain</dt><dd class="terrain"></dd>
+				<dt>Surface Water</dt><dd class="surface_water"></dd>
+			</dl>
+		</div>
+
+		<div class="template species">
+			<h2 class="name"></h2>
+			<dl>
+				<dt>Average Height</dt><dd class="average_height"></dd>
+				<dt>Language</dt><dd class="language"></dd>
+				<dt>Hair Colors </dt><dd class="hair_colors"></dd>
+				<dt>Skin Colors</dt><dd class="skin_colors"></dd>
+				<dt>Eye Colors</dt><dd class="eye_colors"></dd>
+				<dt>Classification</dt><dd class="classification"></dd>
+				<dt>Average Lifespan</dt><dd class="average_lifespan"></dd>
+				<dt>Designation</dt><dd class="designation"></dd>
+			</dl>
+		</div>	
+
+		<div class="template starship">
+			<h2 class="name"></h2>
+			<dl>
+				<dt>Model</dt><dd class="model"></dd>
+				<dt>Manufacturer</dt><dd class="manufacturer"></dd>
+				<dt>Cost</dt><dd class="cost_in_credits"></dd>
+				<dt>Length</dt><dd class="length"></dd>
+				<dt>Max speed in atmosphere</dt><dd class="max_atmosphering_speed"></dd>
+				<dt>Number of personnel needed</dt><dd class="crew"></dd>
+				<dt>Number of passengers</dt><dd class="passengers"></dd>
+				<dt>Class</dt><dd class="starship_class"></dd>
+			</dl>
+		</div>	
+
+		<div class="template vehicle">
+			<h2 class="name"></h2>
+			<dl>
+				<dt>Model</dt><dd class="model"></dd>
+				<dt>Manufacturer</dt><dd class="manufacturer"></dd>
+				<dt>Cost</dt><dd class="cost_in_credits"></dd>
+				<dt>Length</dt><dd class="length"></dd>
+				<dt>Max speed in atmosphere</dt><dd class="max_atmosphering_speed"></dd>
+				<dt>Number of personnel needed</dt><dd class="crew"></dd>
+				<dt>Number of passengers</dt><dd class="passengers"></dd>
+				<dt>Length of time this vehicle can go without resupply</dt><dd class="consumables"></dd>
+			</dl>
+		</div>		
+	</div>
+</body>
+</html>
