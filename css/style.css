@@ -42,10 +42,9 @@ h3 a{
 }
 
 .active{
-	color: #E8D995;
+	color: #E9ECF2;
 }
 .container{
-	background-color: #000000;
 	float: left;
 	padding-bottom: 20px;
 	margin-left:5em;
@@ -58,8 +57,7 @@ h3 a{
 	margin-top: 10px;
 }
 
-#buttons{
-	text-align: center;
+#buttons{	text-align: center;
 	margin: 10px 5px;
 }
 button{
@@ -112,10 +110,11 @@ dd{
 }
 .species{
 	width: 15em;
+	height: 25em;
 }
 .starship{
 	width: 15em;
-	height: 27em;
+	height: 29em;
 }
 
 .vehicle{

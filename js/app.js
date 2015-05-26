@@ -9,6 +9,7 @@ $(function(){
 });
 
 var getData = function(text, url){
+	$("#"+text).css("cursor", "progress")
 	var result = $.ajax({
 		url: url,
 		dataType: "json",
@@ -18,7 +19,7 @@ var getData = function(text, url){
 		$("#data").empty();
 		$("#count").empty();
 		$("#buttons").empty();
-		$("#count").append("There are " + results.count + " " + text);			
+		addCount(results, url, text);
 		if (results.previous != null)
 			addPrevButton(text, results.previous);
 		if (results.next != null)
@@ -42,7 +43,9 @@ var getData = function(text, url){
 			$("#vehicles").addClass("active");
 			$.each(results.results, addVehicle);
 		}
+		$("#"+text).css("cursor", "default");
 	}).fail(function(jqXHR, error, errorThrown){
+		$("#"+text).css("cursor", "default");
 		console.log(error);
 	});
 }
@@ -199,4 +202,25 @@ function addPrevButton(text, url){
 	$("#buttons").append($("<button />", { text: "Previous", click: function(){
 		getData(text, url);
 	}}));	
+}
+
+function addCount(results, url, text){
+	var begin = 1;
+	var end = results.count;
+
+	if (results.previous == null && results.next == null){
+		$("#count").append("Showing all " + results.count + " " + text);			
+	} else{
+		if (results.previous != null){
+			var page = url.substr(url.length - 1);
+			begin = page * 10 - 9;
+		}
+	
+		if (results.next != null){
+			var page = results.next.substr(results.next.length - 1) - 1;
+			end = page*10;
+		}
+
+		$("#count").append("Showing " + begin + "-" + end + " of " + results.count + " " + text);		
+	}
 }
